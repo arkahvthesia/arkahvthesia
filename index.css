@@ -1,20 +1,47 @@
 html {
-    background-image: url(resources/PNG10343.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-image: url(resources/PNG10343.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 @font-face {
-    font-family: 'Segoe UI';
-    src: url("fonts/SegoeUI-VF.ttf") format("truetype");
+  font-family: 'Segoe UI';
+  src: url("fonts/SegoeUI-VF.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'Segoe UI Light';
-  src: url("fonts/segoe-ui-light.ttf") format("truetype");
+font-family: 'Segoe UI Light';
+src: url("fonts/segoe-ui-light.ttf") format("truetype");
 }  
-.altale {
-  font-family:'Segoe UI Light';
-  color: white;
-  font-size: 40px;
-  transform: translateY(-54px);
+#altale {
+font-family:'Segoe UI Light';
+color: white;
+font-size: 30px;
+transform: translateY(-40px);
+right: 40px;
+
+
 }
+img {
+  position: fixed;
+  top: -369px;
+  right: -350px;
+  transform: scale(0.04);
+}
+
+.img2 {
+  position: fixed;
+  left: 1400px;
+  transform: scale(0.04);
+  top: -369px;
+}
+
+#arcahv {
+  position: fixed;
+font-family:'Segoe UI Light';
+color: white;
+font-size: 30px;
+left: 800px;
+bottom: 10px;
+
+}
+ 
