@@ -6,11 +6,11 @@ html {
 }
 @font-face {
     font-family: 'Segoe UI';
-    src: url("font/SegoeUI-VF.ttf") format("truetype");
+    src: url("fonts/SegoeUI-VF.ttf") format("truetype");
 }
 @font-face {
   font-family: 'Segoe UI Light';
-  src: url("font/segoe-ui-light.ttf") format("truetype");
+  src: url("fonts/segoe-ui-light.ttf") format("truetype");
 }  
 .altale {
   font-family:'Segoe UI Light';
