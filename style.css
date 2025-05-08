@@ -48,22 +48,7 @@ html {
     user-select: none
     }
     
-    #header {
-        width: 1514.6px;
-        height: 163px;
-        overflow: hidden;
-        object-fit: fill;
-        background-position: 50% 50%;
-        background-repeat: cover;
-        clip-path: inset(0px 590px 30px 30px);
-        background-color: black;
-        direction: rtl;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        position: relative;
-        top: -863px;
-        left: -9px;
+    
     }
     
     #dragParent {
