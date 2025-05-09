@@ -5,20 +5,110 @@
     <title>arkahvthesia's stuff :3</title>
     <link rel="stylesheet" href="index.css">
     <link rel="script" href="shutdown.js">
+    <link rel="stylesheet" href="aeros.css">
+    
 </head>
-<div id="altale">
-        <h1>welcome</h1>
+<script>
+
+    let currZ = 5;
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (elmnt.querySelector('.dragHeader')) {
+        // if present, the header is where you move the DIV from:
+        elmnt.querySelector('.dragHeader').onmousedown = dragMouseDown;
+      } else {
+        // otherwise, move the DIV from anywhere inside the DIV:
+        elmnt.onmousedown = dragMouseDown;
+      }
+      let placeholderElem = document.createElement('div');
+      placeholderElem.style.width = elmnt.offsetWidth;
+      placeholderElem.style.height = elmnt.offsetHeight;
+      placeholderElem.style.display = 'none';
+      let elem_old_pos = {};
+      elem_old_pos.width = elmnt.offsetWidth;
+      elem_old_pos.height = elmnt.offsetHeight;
+      elem_old_pos.left = elmnt.getBoundingClientRect().left;
+      elem_old_pos.top = elmnt.getBoundingClientRect().top;
+      elmnt.style.left = elem_old_pos.left;
+      elmnt.style.top = elem_old_pos.top;
+      elmnt.style.position = '';
+      elmnt.insertAdjacentElement('beforebegin', placeholderElem)
+      let element_locked = true;
+    
+      window.addEventListener('resize',()=>{
+        var old_elem_status = elmnt.style.position;
+        elmnt.style.position = 'static';
+        var old_placeholder_status = placeholderElem.style.display;
+        placeholderElem.style.display = 'none';
+        placeholderElem.style.width = elmnt.offsetWidth;
+        placeholderElem.style.height = elmnt.offsetHeight;
+        elem_old_pos.width = elmnt.offsetWidth;
+        elem_old_pos.height = elmnt.offsetHeight;
+        elem_old_pos.left = elmnt.getBoundingClientRect().left;
+        elem_old_pos.top = elmnt.getBoundingClientRect().top;
+        elmnt.style.position = old_elem_status;
+        placeholderElem.style.display = old_placeholder_status;
+        if (element_locked) {
+          elmnt.style.left = elem_old_pos.left;
+          elmnt.style.top = elem_old_pos.top;
+        }
+      })
+    
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        elmnt.style.position = 'fixed';
+        placeholderElem.style.display = 'block';
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+    
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        // get on top
+        elmnt.style.zIndex = currZ++;
+      }
+    
+      function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+        element_locked = false;
+        elmnt.style.position = 'fixed';
+      }
+    }
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.querySelectorAll('.draggable-nosnap').forEach(elem=>dragElement(elem));
+    });
+    </script>
+<div class="window active draggable-nosnap" style="max-width: 900px">
+    <div class="title-bar dragHeader">
+      <div class="title-bar-text">Hello!</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"onclick="window.close()"></button>
+      </div>
     </div>
-<!-- <div class="rectangle">
-    <This is a rectangle -->
-<!-- </div> -->
- 
-<div id="icon">
-    <img src="resources/icon.svg">
+    <div class="window-body has-space">
+      <div id="headerthing">Welcome!</div>
+      <div id="warning">This website is currently under construction.</div>
+      <div id="progress">Progress till the site finishes: ???%. ??? minutes remaining..</div>
+      <div role="progressbar" class="marquee"></div>
+      
     </div>
-    <div id="die">
-    <input type="image" src="resources/die.svg" class="img2">
-    </div>
-    <div id="arcahv">
-        <p>under construction</p>
-    </div>
+  </div>
+  
