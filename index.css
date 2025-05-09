@@ -1,5 +1,5 @@
 html {
-  background-image: url(resources/PNG10343.png);
+  background-image: url(resources/PNG10813.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -12,37 +12,26 @@ html {
 font-family: 'Segoe UI Light';
 src: url("fonts/segoe-ui-light.ttf") format("truetype");
 }  
-#altale {
-font-family:'Segoe UI Light';
-color: white;
-font-size: 30px;
-transform: translateY(-40px);
-right: 40px;
 
-
+.window-body {
+  height: 550px;
 }
-img {
-  position: fixed;
-  top: -369px;
-  right: -350px;
-  transform: scale(0.04);
+#headerthing {
+  font-size: 30px;
+  color: green;
+  font-weight: lighter;
+  transform: translateY(10px);
+  right: 5px;
 }
-
-.img2 {
-  position: fixed;
-  left: 1400px;
-  transform: scale(0.04);
-  top: -369px;
+.marquee {
+  width: 650px;
+  transform: translateY(10px);
 }
-
-#arcahv {
-  position: fixed;
-font-family:'Segoe UI Light';
-color: white;
-font-size: 30px;
-left: 800px;
-bottom: 10px;
-
+#warning {
+  font-size: 15px;
+  transform: translateY(10px);
 }
- 
-
+#progress {
+  font-size: 15px;
+  transform: translateY(65px);
+}
