@@ -3,27 +3,32 @@
 <head>
     <meta charset="utf-8">
     <title>arkahvthesia's stuff :3</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index">
     <link rel="script" href="shutdown.js">
     <link rel="stylesheet" href="aeros.css">
-    <meta name="title" content="arkahvfaux.depthic?" />
+    <link rel="script"href="resources/web/TaskbarGradient.js">
+    <link rel="script"href="resources/web/WindowDrag.js">
+    <link rel="script"href="resources/web/vanilla-tilt.min.js">
+    <!-- Primary Meta Tags -->
+<title>arkahvfaux.depthic?</title>
+<meta name="title" content="arkahvfaux.depthic?" />
 <meta name="description" content="forward>assemble.shape?>experiment.>emotion>!display" />
-
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://arkahvthesia.dev/" />
 <meta property="og:title" content="arkahvfaux.depthic?" />
 <meta property="og:description" content="forward>assemble.shape?>experiment.>emotion>!display" />
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://arkahvthesia.dev/" />
 <meta property="twitter:title" content="arkahvfaux.depthic?" />
 <meta property="twitter:description" content="forward>assemble.shape?>experiment.>emotion>!display" />
 
 
-<!-- Meta Tags Generated with https://metatags.io -->
  
+    
+
 </head>
+
+
 <script>
 
     let currZ = 5;
@@ -114,9 +119,12 @@
     <div class="title-bar dragHeader">
       <div class="title-bar-text">Hello!</div>
       <div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close" onclick="window.close()"></button>
+        <button aria-label="Minimize" onclick="window.open('https://m.soundcloud.com/leon-hwang-368077289/arcaeaarcahv-feryquitous?in=mjkk125/sets/arcaea')"></button>
+        <button aria-label="Maximize"onclick="window.location.reload()"></button>
+        <button aria-label="Close"onclick="window.close()" aria-describedby="balloon-desc">
+          <div role="tooltip" id="balloon-desc"hidden>Close tab</div>
+        </button>
+        
       </div>
     </div>
     <div class="window-body has-space">
@@ -124,7 +132,60 @@
       <div id="warning">This website is currently under construction.</div>
       <div id="progress">Progress till the site finishes: ???%. ??? minutes remaining..</div>
       <div role="progressbar" class="marquee"></div>
-      
+      <div id="windowclose">
+        
+      </div>
     </div>
   </div>
+  <div class="taskbar">
+  <button class="startbutton"></button>
+  <!-- this is the default state.
+  the button above is used for hover and active.
+  if you want the active state to stick, switch the
+  class on the button to .startbuttonactive and
+  it will stick. -->
+  <div class="startorb"></div>
+    <div class="taskbaricons" id="taskbaricons">
+      <button class="taskbarbutton taskbarfocused" style="--img-colour: rgb(105, 132, 208.5); --mouse-x: 6px; --mouse-y: 11px;"><img class="taskbaricon" draggable="false" src="./resources/web/information.png"></button>
+    </div>
+    <div class="datetime"></div>
+    <div class="aeropeek"></div>
+</div>
+
+<!-- Start Menu -->
+<div class="start hidden">
+  <div class="startrightcontainer">
+    <div class="startmenuexplorebuttons">
+    <div class="StartMenuButton">Placeholder</div>
+    <div class="StartMenuButton">Placeholder</div>
+    <div class="StartMenuButton">Placeholder</div>
+    <div class="StartMenuButton">Placeholder</div>
+    <div class="StartMenuButton">Placeholder</div>
+    <div class="StartMenuButton">Placeholder</div>
+    <div class="StartMenuButton">Placeholder</div>
+    <div class="p"></div>
+    
+  </div>
+  </div>
+  <div class="startinner">
+    <div class="searchbox">
+     <form method="GET"action="https:/www.google.com/search">
+      <input type="search" placeholder="Google.."name="q">
+      
+
+      </form>
+      
+
+    </div>
+  </div>
+</div>
+<!-- Taskbar Gradient Hover -->
+<script src="./resources/web/TaskbarGradient.js"></script>
+
+<!-- tilt -->
+<script src="./resources/web/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Start Menu -->
+<script src="./resources/web/StartButton.js"></script>
+<script defer="" src="./resources/web/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;93d8caa8f8f73934&quot;,&quot;version&quot;:&quot;2025.4.0-1-g37f21b1&quot;,&quot;r&quot;:1,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;token&quot;:&quot;b3eaf920406944588e14dcb2e45bb1ff&quot;,&quot;b&quot;:1}" crossorigin="anonymous"></script>
   
